@@ -13,15 +13,8 @@ const App = () => {
       <h1>Lambda Eats</h1>
       <p>Bob Loblaw Approved.</p>
       <Routes>
-        <Route exact path="/">
-          <Main />
-        </Route>
-        <Route path="/pizza">
-          <Pizza />
-        </Route>
-        {/* <Route path="/place-order"> */}
-
-        {/* </Route> */}
+        <Route exact path="/" element={<Main />} />
+        <Route path="/pizza" element={<Pizza />} />
       </Routes>
     </div>
   );
