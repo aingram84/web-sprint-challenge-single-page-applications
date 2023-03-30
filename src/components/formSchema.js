@@ -1,21 +1,18 @@
 import * as yup from "yup";
 
 const formSchema = yup.object().shape({
-    username: yup.string()
+    name: yup.string()
         .trim()
         .required("Name Required")
-        .min(3, "name must be at least 2 characters"),
-    email: yup
-        .string()
-        .email("Must be valid email")
-        .required("Email required"),
-    role: yup.string()
-    .oneOf(["instructor", "student", "alumni"], "Role is required"),
-    civil: yup.string()
-    .oneOf(["married", "single"], "Civil status required"),
-    coding: yup.boolean(),
-    reading: yup.boolean(),
-    hiking: yup.boolean()
+        .min(2, "name must be at least 2 characters"),
+    size: yup.string()
+        .oneOf(["small", "medium", "large", "whoa"], "Size required"),
+    topping1: yup.boolean(),
+    topping2: yup.boolean(),
+    topping3: yup.boolean(),
+    topping4: yup.boolean(),
+    specialInst: yup.string()
+        .trim()
 })
 
 export default formSchema;
